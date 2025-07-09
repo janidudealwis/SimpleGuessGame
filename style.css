@@ -117,7 +117,7 @@ body {
   line-height: 180%;
   position: absolute;
   right: 10%;
-  bottom: 20%;
+  bottom: 18%;
   padding: 22px 80px 22px 22px;
   border-radius: 30px;
   border: 1px #595959 solid;
@@ -133,7 +133,7 @@ body {
 .credits {
   position: absolute;
   color: var(--white);
-  bottom: 20%;
+  bottom: 18%;
   left: 10%;
   width: fit-content;
   font-size: 14px;
@@ -164,7 +164,7 @@ body {
 
 .left-section {
   color: var(--white);
-  top: 30%;
+  top: 37%;
   left: 10%;
   position: absolute;
   max-width: 320px;
