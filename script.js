@@ -41,6 +41,15 @@ function playClickSound() {
   clickSound.play();
 }
 
+// Confetti function
+function launchConfetti() {
+  confetti({
+    particleCount: 120,
+    spread: 100,
+    origin: { x: 0.5, y: 0.5 },
+  });
+}
+
 // Check guess with proper distance logic
 document.querySelector(".check-btn").addEventListener("click", function () {
   playClickSound();
@@ -56,14 +65,16 @@ document.querySelector(".check-btn").addEventListener("click", function () {
   if (guess === secretNumber) {
     document.querySelector(".message").textContent = "Congrats, Correct Number";
     document.querySelector(".secret-number").textContent = secretNumber;
+    launchConfetti();
 
     if (score > highScore) {
       highScore = score;
-      document.querySelector(".score-container").innerHTML = `
-        <p>score : <span class="score">${score}</span></p>
-        <p>high score : <span class="highscore">${highScore}</span></p>
-      `;
     }
+
+    document.querySelector(".score-container").innerHTML = `
+      <p>score : <span class="score">${score}</span></p>
+      <p>high score : <span class="highscore">${highScore}</span></p>
+    `;
   } else {
     if (score > 1) {
       if (difference > 3) {
@@ -96,7 +107,6 @@ document.querySelector(".again-btn").addEventListener("click", function () {
   document.querySelector(".secret-number").textContent = "?";
   document.querySelector(".guess-number").value = "";
 
-  // Keep high score
   document.querySelector(".score-container").innerHTML = `
     <p>score : <span class="score">${score}</span></p>
     <p>high score : <span class="highscore">${highScore}</span></p>

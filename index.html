@@ -36,13 +36,33 @@
       <button class="again-btn btn">again</button>
 
       <video autoplay muted loop class="myVideo">
-        <source src="assets/bg2.mp4" type="video/mp4" />
+        <source src="assets/bg4.mp4" type="video/mp4" />
       </video>
     </section>
 
     <audio id="bg-music" src="assets/bg-music.mp3" loop></audio>
 
+    <div class="left-section">
+      <h1>game rules</h1>
+      <ul>
+        <li>Pick a number between 0 and 30.</li>
+        <li>The game will tell you if your guess is:
+          <ul id="nested-list">
+            <li>Correct — you win!</li>
+            <li>Too high — try a smaller number.</li>
+            <li>Too low — try a bigger number.</li>
+          </ul>
+        </li>
+        <li>You have 10 attempts to guess the right number.</li>
+        <li>If you guess correctly, your highscore (best score) will be saved.</li>
+        <li>If you don’t guess it in 10 tries, you lose, but you can always try again.</li>
+        <li>To play again, just click the Again button and start fresh.</li>
+      </ul>
+    </div>
     <p class="credits">developed by Janidu De Alwis</p>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
