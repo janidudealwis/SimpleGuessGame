@@ -6,17 +6,29 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="assets/favicon.png">
     <title>Guess My Number</title>
   </head>
   <body>
     <div class="audio-controls">
       <button class="mute-btn" id="muteToggle">🔊</button>
-      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1" />
+      <input
+        type="range"
+        id="volumeSlider"
+        min="0"
+        max="1"
+        step="0.01"
+        value="1"
+      />
     </div>
 
     <section class="main">
@@ -46,7 +58,8 @@
       <h1>game rules</h1>
       <ul>
         <li>Pick a number between 0 and 30.</li>
-        <li>The game will tell you if your guess is:
+        <li>
+          The game will tell you if your guess is:
           <ul id="nested-list">
             <li>Correct — you win!</li>
             <li>Too high — try a smaller number.</li>
@@ -54,13 +67,36 @@
           </ul>
         </li>
         <li>You have 10 attempts to guess the right number.</li>
-        <li>If you guess correctly, your highscore (best score) will be saved.</li>
-        <li>If you don’t guess it in 10 tries, you lose, but you can always try again.</li>
+        <li>
+          If you guess correctly, your highscore (best score) will be saved.
+        </li>
+        <li>
+          If you don’t guess it in 10 tries, you lose, but you can always try
+          again.
+        </li>
         <li>To play again, just click the Again button and start fresh.</li>
       </ul>
     </div>
-    <p class="credits">developed by Janidu De Alwis</p>
 
+    <div class="credits">
+      developed by Janidu De Alwis
+      <div class="social-links">
+        <a
+          href="https://github.com/janidudealwis"
+          target="_blank"
+          class="social-icon"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/janidudealwis/"
+          target="_blank"
+          class="social-icon"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
